@@ -10,10 +10,11 @@
 	<packaging>war</packaging>
 
 	<name>curso-jsg-e-primefaces</name>
-
+	
 	<properties>
-		<project.build.sourceEncoding>UFT-8</project.build.sourceEncoding>
-	</properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties> 
+
 
 	<dependencies>
 		<dependency>
