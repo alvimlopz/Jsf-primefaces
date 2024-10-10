@@ -6,6 +6,8 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,28 +17,32 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
 @Entity
 @Table(name = "empresa")
-public class Empresa implements Serializable{
+public class Empresa implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "nome_fantasia")
+	@Column(name = "nome_fantasia", nullable = false, length = 80)
 	private String nomeFantasia;
-	
-	@Column(name = "razao_social")
+
+	@Column(name = "razao_social", nullable = false, length = 120)
 	private String razaoSocial;
-	
-	private String cpnj;
-	
-	@Temporal(TemporalType.TIMESTAMP)
+
+	@Column(nullable = false, length = 18)
+	private String cnpj;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "data_fundacao" , nullable = false)
 	private Date dataFundacao;
-	
+
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false, length = 30)
+	private TipoEmpresa tipoEmpresa;
+
 	@ManyToOne
 	@JoinColumn(name = "ramo_atividade_id")
 	private RomaAtividade ramoAtividade;
@@ -66,11 +72,11 @@ public class Empresa implements Serializable{
 	}
 
 	public String getCpnj() {
-		return cpnj;
+		return cnpj;
 	}
 
-	public void setCpnj(String cpnj) {
-		this.cpnj = cpnj;
+	public void setCpnj(String cnpj) {
+		this.cnpj = cnpj;
 	}
 
 	public Date getDataFundacao() {
@@ -87,6 +93,14 @@ public class Empresa implements Serializable{
 
 	public void setRamoAtividade(RomaAtividade ramoAtividade) {
 		this.ramoAtividade = ramoAtividade;
+	}
+
+	public TipoEmpresa getTipoEmresa() {
+		return tipoEmpresa;
+	}
+
+	public void setTipoEmresa(TipoEmpresa tipoEmresa) {
+		this.tipoEmpresa = tipoEmresa;
 	}
 
 	@Override
@@ -110,6 +124,5 @@ public class Empresa implements Serializable{
 	public String toString() {
 		return "Empresa [id=" + id + "]";
 	}
-	
-	
+
 }
