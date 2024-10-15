@@ -1,4 +1,7 @@
-com\alvimlops\erp\model\TipoEmpresa.class
+com\alvimlops\erp\repository\CamadaPersistence.class
 com\alvimlops\erp\model\Empresa.class
 com\alvimlops\erp\model\RomaAtividade.class
+com\alvimlops\erp\repository\RamoAtividades.class
+com\alvimlops\erp\model\TipoEmpresa.class
+com\alvimlops\erp\repository\Empresas.class
 com\alvimlops\erp\repository\SchemaGeneration.class
