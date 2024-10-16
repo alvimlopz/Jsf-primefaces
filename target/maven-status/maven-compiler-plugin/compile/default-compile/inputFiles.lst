@@ -3,5 +3,9 @@ C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com
 C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\repository\RamoAtividades.java
 C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\repository\SchemaGeneration.java
 C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\repository\Empresas.java
+C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\util\Transacional.java
+C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\util\EntityManagerProducer.java
+C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\util\Transacionalinterceptor.java
+C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\service\CadastroEmpresaService.java
 C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\model\TipoEmpresa.java
 C:\Users\Alvaro.local\eclipse-workspace\curso-jsg-e-primefaces\src\main\java\com\alvimlops\erp\model\RomaAtividade.java
