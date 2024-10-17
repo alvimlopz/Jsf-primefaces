@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
 <h:head>
 
 
@@ -11,14 +13,57 @@
 
 </h:head>
 
-<body>
+<h:body>
 	<header>
 		<h:graphicImage library="alvimCode" name="logo.png" />
 	</header>
 
-	<h:outputText value="Olá Mundo!" />
+	<div id="conteudo">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Razão social: " for="razaoSocial" />
+				<h:inputText id="razaoSocial" />
 
+				<h:outputLabel value="Nome fantasia: " for="nomeFantasia" />
+				<h:inputText id="nomeFantasia" />
+
+				<h:outputLabel value="Tipo empresa" for="tipo" />
+				<h:selectOneMenu id="tipo">
+					<f:selectItem itemLabel="Selecione..." />
+					<f:selectItem itemLabel="MEI" itemValue="MEI" />
+					<f:selectItem itemLabel="LTDA" itemValue="LDTA" />
+				</h:selectOneMenu>
+				
+				<h:outputLabel/>
+				<h:commandButton value="Salvar"/>
+				
+			</h:panelGrid>
+			
+			<h:dataTable value="#{[0, 0, 0, 0]}">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Razao Social"/>
+					</f:facet>
+					<h:outputText value="AlvimCode"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Nome fantasia"/>
+					</f:facet>
+					<h:outputText value="AlvimCode treinamentos"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Tipo Empresa"/>
+					</f:facet>
+					<h:outputText value="LDTA"/>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</div>
 	<footer> Curso Onaline "JSF e PRIMEFACES" </footer>
-</body>
+</h:body>
 
 </html>
